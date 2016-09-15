@@ -11,14 +11,14 @@ import javafx.stage.Stage;
 
 public class ErrorAlert {
 
-    public static void display() {
+    public static void display(String title, String message) {
         Stage window = new Stage();
         window.initModality(Modality.APPLICATION_MODAL);
-        window.setTitle("Error");
+        window.setTitle(title);
         window.setMinWidth(250);
 
         Label label = new Label();
-        label.setText("Error while opening file");
+        label.setText(message);
 
         Button closeButton = new Button("OK");
         closeButton.setOnAction(event -> window.close());
